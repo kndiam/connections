@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connections Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <h1>Connections</h1>
+    <p>Create four groups of four!</p>
+    
+    <div id="groups-container"></div>
+    
+    <div id="game-board">
+        {% for word in words %}
+        <div class="word" data-word="{{ word }}">{{ word }}</div>
+        {% endfor %}
+    </div>
+    
+    <div class="controls">
+        <div class="lives-display">
+            <span>Mistakes Remaining:</span>
+            <div class="life-dots" id="lives-container"></div>
+        </div>
+        
+        <div class="buttons">
+            <button id="shuffle-btn">Shuffle</button>
+            <button id="deselect-btn">Deselect All</button>
+            <button id="submit-btn" disabled>Submit</button>
+        </div>
+    </div>
+    
+    <script>
+        const groupInfo = JSON.parse('{{ group_info|tojson}}');
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

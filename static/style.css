@@ -1,0 +1,229 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --button-bg: #000000;
+    --button-border: #ffffff;
+    --button-text: #ffffff;
+    --group-colors: #FFD700, #90EE90, #87CEEB, #9370DB;
+    --life-dot-active: #ff4d4d;
+    --life-dot-inactive: #333333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #game-board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    button {
+        flex: 1;
+        padding: 12px 8px;
+    }
+}
+
+/* Game board */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.word {
+    padding: 12px;
+    background-color: #1e1e1e;
+    text-align: center;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #333;
+}
+
+@keyframes bounceUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.word.bouncing {
+  animation: bounceUp 0.4s ease;
+  position: relative; /* Ensure proper z-index */
+  z-index: 10;
+}
+
+.word.selected {
+    background-color: #333;
+    transform: scale(0.98);
+}
+
+/* Groups display */
+#groups-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    min-height: 120px;
+}
+
+.group {
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255,255,255,0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.group.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.group-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.group-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.group-words span {
+    background-color: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.lives-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid var(--button-border);
+    border-radius: 25px; /* Oblong shape */
+    cursor: pointer;
+    font-size: 14px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    transition: all 0.2s;
+    min-width: 80px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+button:disabled {
+    background-color: #333;
+    color: #666;
+    cursor: not-allowed;
+    border-color: #666;
+}
+
+#submit-btn {
+    background-color: #1a1a1a;
+}
+
+#submit-btn:not(:disabled):hover {
+    background-color: #333;
+}
+
+/* Lives dots */
+.life-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.life-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.life-dot.active {
+    background-color: var(--life-dot-active);
+}
+
+.life-dot.inactive {
+    background-color: var(--life-dot-inactive);
+}
+
+/* Results */
+#results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+.success {
+    color: #6bff6b;
+}
+
+/* Animations */
+.word.animating {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-20px); opacity: 0; }
+}
+
+.word.fading {
+    animation: floatUp 0.5s ease forwards;
+}

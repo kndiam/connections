@@ -1,0 +1,54 @@
+{
+  "difficulty1": {
+    "groups": [
+      {
+        "words": ["Apple", "Banana", "Orange", "Grape"],
+        "category": "Fruits"
+      },
+      {
+        "words": ["Dog", "Cat", "Fish", "Bird"],
+        "category": "Pets"
+      }
+    ],
+    "color": "#FFD700" 
+  },
+  "difficulty2": {
+    "groups": [
+      {
+        "words": ["Carrot", "Broccoli", "Potato", "Spinach"],
+        "category": "Vegetables"
+      },
+      {
+        "words": ["Chair", "Table", "Desk", "Sofa"],
+        "category": "Furniture"
+      }
+    ],
+    "color": "#90EE90" 
+  },
+  "difficulty3": {
+    "groups": [
+      {
+        "words": ["January", "February", "March", "April"],
+        "category": "Months"
+      },
+      {
+        "words": ["Red", "Blue", "Green", "Yellow"],
+        "category": "Colors"
+      }
+    ],
+    "color": "#87CEEB"  
+  },
+  "difficulty4": {
+    "groups": [
+      {
+        "words": ["Hamlet", "Macbeth", "Othello", "Lear"],
+        "category": "Shakespeare Plays"
+      },
+      {
+        "words": ["Jupiter", "Mars", "Venus", "Saturn"],
+        "category": "Roman Gods"
+      }
+    ],
+    "color": "#9370DB"  
+  }
+}
