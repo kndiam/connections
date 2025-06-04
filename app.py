@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import json
+import os
 import random
 
 app = Flask(__name__)
@@ -46,11 +47,12 @@ def check_answers():
             'difficulty': group_info[sorted_key]['difficulty']
         })
     
-    for k,v in group_info.items():
+    for k in group_info.keys():
         if  set(k.split(' '))&set(user_words) ==3:
             return jsonify({'correct':False, 'type':'oneaway'})
     
     return jsonify({'correct': False, 'type':'completelywrong'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
