@@ -23,8 +23,8 @@
   "difficulty2": {
     "groups": [
         {
-        "words": ["Humble", "Beautiful", "Smart", "Funny"],
-        "category": "My best traits"
+        "words": ["Sunsets", "Loading Screen", "Varg", "Ted"],
+        "category": "First date topics"
       },
       {
         "words": ["Suspiria", "Pearl", "MaXXXine", "Heretic"],
@@ -68,7 +68,7 @@
       {"words": ["Capitals", "Chess", "Guessing", "Age"],
         "category": "Important skills"},
       {
-        "words": ["Sulphur", "Carp", "Poppy", "Woad"],
+        "words": ["Sulphur", "Carp", "Elderberry", "Pheasant"],
         "category": "Important days on the French Republican Calendar"
       },
       {
