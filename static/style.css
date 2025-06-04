@@ -94,7 +94,7 @@ header {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: min(2vw, 20px); 
+  font-size: min(2vw, 16px); 
   width: 100%;
   box-sizing: border-box;
   position: relative;
