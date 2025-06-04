@@ -46,7 +46,8 @@ def check_answers():
             'color': group_info[sorted_key]['color'],
             'difficulty': group_info[sorted_key]['difficulty']
         })
-    
+
+   
     for k in group_info.keys():
         if  set(k.split(' '))&set(user_words) ==3:
             return jsonify({'correct':False, 'type':'oneaway'})
