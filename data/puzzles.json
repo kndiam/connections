@@ -2,25 +2,41 @@
   "difficulty1": {
     "groups": [
       {
-        "words": ["Apple", "Banana", "Orange", "Grape"],
-        "category": "Fruits"
+        "words": ["Friends", "Lovers", "Partners", "Soulmates"],
+        "category": "So what are we?"
       },
       {
-        "words": ["Dog", "Cat", "Fish", "Bird"],
-        "category": "Pets"
-      }
+        "words": ["Swamp", "Donkey", "Onions", "Princess"],
+        "category": "Your favorite movie"
+      },
+      {
+        "words":["Roses", "Chocolate", "Card","Jewelry"],
+        "category": "Classic gifts"
+    },
+    {
+        "words":["Guitar", "Bass", "Piano","Drums"],
+        "category": "Jamming supplies"
+    }
     ],
-    "color": "#FFD700" 
+    "color": "#FFD700"  
   },
   "difficulty2": {
     "groups": [
-      {
-        "words": ["Carrot", "Broccoli", "Potato", "Spinach"],
-        "category": "Vegetables"
+        {
+        "words": ["Humble", "Beautiful", "Smart", "Funny"],
+        "category": "My best traits"
       },
       {
-        "words": ["Chair", "Table", "Desk", "Sofa"],
-        "category": "Furniture"
+        "words": ["Suspiria", "Pearl", "MaXXXine", "Heretic"],
+        "category": "'Bad' horror movies"
+      },
+      {
+        "words": ["Sweet", "Cool", "Whimsical", "Little"],
+        "category": "Notable adjectives"
+      },
+      {
+        "words": ["Switzerland", "Lichtenstein", "Portugal", "Romania"],
+        "category": "European destinations"
       }
     ],
     "color": "#90EE90" 
@@ -28,27 +44,42 @@
   "difficulty3": {
     "groups": [
       {
-        "words": ["January", "February", "March", "April"],
-        "category": "Months"
+        "words": ["Painting", "Scarf", "Sweater", "Web Game"],
+        "category": "Good gifts for someone you love"
       },
       {
-        "words": ["Red", "Blue", "Green", "Yellow"],
-        "category": "Colors"
+        "words": ["Lost", "Garden", "Zoo", "Kunst"],
+        "category": "Early dates"
+      },
+      {
+        "words": ["Wheelchair", "DLC", "Cloaking Device", "Sound Effects"],
+        "category": "Very mature"
+      },
+      {
+        "words": ["Music Videos", "Trek", "Guy", "Vampires"],
+        "category": "Things we watch together"
       }
+      
     ],
-    "color": "#87CEEB"  
+    "color": "#87CEEB" 
   },
   "difficulty4": {
     "groups": [
+      {"words": ["Capitals", "Chess", "Guessing", "Age"],
+        "category": "Important skills"},
       {
-        "words": ["Hamlet", "Macbeth", "Othello", "Lear"],
-        "category": "Shakespeare Plays"
+        "words": ["Sulphur", "Carp", "Poppy", "Woad"],
+        "category": "Important days on the French Republican Calendar"
       },
       {
-        "words": ["Jupiter", "Mars", "Venus", "Saturn"],
-        "category": "Roman Gods"
+        "words": ["Future", "Egyptian", "Tiles", "Art"],
+        "category": "Museums we've been to"
+      },
+      {
+        "words": ["Continents", "Postage", "Egg", "Medical"],
+        "category": "Museums we've never been to"
       }
     ],
-    "color": "#9370DB"  
+    "color": "#9370DB" 
   }
 }

@@ -37,7 +37,7 @@ def check_answers():
     group_info = request.json.get('group_info', {})
     sorted_key = ' '.join(sorted(user_words))
     print("HELLO")
-    print(type(group_info))
+    print(group_info)
     if sorted_key in group_info.keys():
         return jsonify({
             'correct': True,
@@ -46,7 +46,11 @@ def check_answers():
             'difficulty': group_info[sorted_key]['difficulty']
         })
     
-    return jsonify({'correct': False})
+    for k,v in group_info.items():
+        if  set(k.split(' '))&set(user_words) ==3:
+            return jsonify({'correct':False, 'type':'oneaway'})
+    
+    return jsonify({'correct': False, 'type':'completelywrong'})
 
 if __name__ == '__main__':
     app.run(debug=True)
